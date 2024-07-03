@@ -30,6 +30,7 @@ public class JwtService {
          *   Use HS256 algorithm for other applications to be able to use it
          */
         // Build and sign the JWT token
+        /*TODO: builder-> set noi dung cho payload*/
         return Jwts.builder().setSubject((userPrincipal.getUsername())) // Set the subject (username)
                 .setIssuedAt(new Date(System.currentTimeMillis())) // Set the issue time
                 .setExpiration(new Date((new Date()).getTime() + EXPIRE_TIME))  // Set the expiration time

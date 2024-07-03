@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.config.service.JwtResponse;
 import com.example.demo.config.service.JwtService;
 import com.example.demo.config.service.UserService;
+import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,7 +12,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.model.*;
 
 @RestController
 @CrossOrigin("*")

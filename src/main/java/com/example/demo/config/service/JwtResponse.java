@@ -4,6 +4,9 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 
+/*TODO: tra ve mot user co quyen gi,
+ *       tra ve mojt Jwt response khac
+ *       de client lay user do ve*/
 public class JwtResponse {
     private Long id;
     private String token;

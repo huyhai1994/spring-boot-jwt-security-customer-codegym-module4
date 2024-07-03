@@ -14,7 +14,8 @@ public class User {
     private Long id;
     private String username;
     private String password;
-
+    /*TODO: tai khoan co nhieu quyen
+     *  -> de scale, do lon du an co the tang len*/
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 }
