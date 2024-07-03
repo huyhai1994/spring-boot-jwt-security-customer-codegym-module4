@@ -12,6 +12,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class UserPrinciple implements UserDetails {
+    /*TODO: note vi User la mot POJO
+     *   -> tao UserPrinciple de implements UserDetails*/
     @Serial
     private static final long serialVersionUID = 1L;
     private final String username;

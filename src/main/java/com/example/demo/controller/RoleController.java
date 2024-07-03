@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoleController {
     @Autowired
     private IRoleService roleService;
+
     @GetMapping
-    public ResponseEntity<Iterable<GetNumberOfRole>> getRole(){
+    public ResponseEntity<Iterable<GetNumberOfRole>> getRole() {
         Iterable<GetNumberOfRole> getNumberOfRoles = roleService.getAllNumberOfRole();
         return new ResponseEntity<>(getNumberOfRoles, HttpStatus.OK);
     }
