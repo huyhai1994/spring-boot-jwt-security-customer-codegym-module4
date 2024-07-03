@@ -29,8 +29,16 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
-        Authentication authentication
-                = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+        /*TODO: @RequestBody is a Spring MVC annotation used to bind the
+           incoming HTTP request body to a method parameter.
+            It is commonly used in RESTful APIs to receive
+            JSON or XML payloads and convert them into Java objects.
+                In the provided code snippet, the @RequestBody annotation
+                 is used in the login method to bind the incoming JSON payload
+                 containing the user's username and password to the User object.
+                  This allows the method to access the username and
+                   password values directly from the request body.*/
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtService.generateTokenLogin(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();

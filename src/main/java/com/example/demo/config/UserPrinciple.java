@@ -25,14 +25,15 @@ public class UserPrinciple implements UserDetails {
         this.roles = roles;
     }
 
-    public static UserPrinciple build(User user) {
+    public static UserPrinciple build(User user)
+        /*TODO: Chuyen role thanh grantedAuthority*/ {
         List<GrantedAuthority> authorities = new ArrayList<>();
         for (Role role : user.getRoles()) {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
 
         return new UserPrinciple(user.getUsername(),
-                user.getPassword(),authorities);
+                user.getPassword(), authorities);
     }
 
     @Override

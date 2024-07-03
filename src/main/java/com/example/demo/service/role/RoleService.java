@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class RoleService implements IRoleService {
     @Autowired
     private IRoleRepository roleRepository;
+
     @Override
     public Iterable<GetNumberOfRole> getAllNumberOfRole() {
         return roleRepository.getAllNumberOfRole();
